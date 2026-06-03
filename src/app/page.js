@@ -751,7 +751,7 @@ export default function Home() {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                background: "linear-gradient(135deg, #1c202a 0%, #0d0f15 100%)",
+                background: "linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-primary) 100%)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
