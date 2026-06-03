@@ -10,7 +10,7 @@ const SERVICES_DATA = [
     title: "Paint Protection Film (PPF)",
     category: "detailing",
     description: "Ultra-durable, self-healing polyurethane film that shields your car's paint from scratches, stone chips, bird droppings, and road debris.",
-    price: "Premium Plan",
+    price: "Elite Shield",
     icon: "🛡️"
   },
   {
@@ -18,7 +18,7 @@ const SERVICES_DATA = [
     title: "Ceramic Coating",
     category: "detailing",
     description: "High-gloss 9H nano-ceramic liquid shield that provides hydrophobic protection, chemical resistance, and long-lasting paint brilliance.",
-    price: "Starts High",
+    price: "9H Protection",
     icon: "✨"
   },
   {
@@ -26,7 +26,7 @@ const SERVICES_DATA = [
     title: "Paint Restoration",
     category: "detailing",
     description: "Multi-stage machine compounding and polishing to eliminate paint swirls, light scratches, and restore a factory showroom gloss.",
-    price: "Restorative",
+    price: "Showroom Gloss",
     icon: "🌀"
   },
   {
@@ -34,7 +34,7 @@ const SERVICES_DATA = [
     title: "Vinyl Wraps & Styling",
     category: "detailing",
     description: "Give your car a completely new custom aesthetic with our premium colored or textured vinyl wraps from industry-leading brands.",
-    price: "Custom Quote",
+    price: "Custom Styling",
     icon: "🚗"
   },
   {
@@ -42,7 +42,7 @@ const SERVICES_DATA = [
     title: "Car Servicing & Tuning",
     category: "mechanical",
     description: "Comprehensive multibrand car maintenance including engine oil change, filters, spark plugs, brakes check, and computerized diagnostics.",
-    price: "Full Service",
+    price: "OEM Standard",
     icon: "🔧"
   },
   {
@@ -50,7 +50,7 @@ const SERVICES_DATA = [
     title: "Wheel Alignment & Balancing",
     category: "mechanical",
     description: "Precision laser alignment and computerized balancing to ensure optimal handling, smooth drives, and extended tyre life.",
-    price: "Precision Fit",
+    price: "Laser Precision",
     icon: "⚙️"
   },
   {
@@ -58,7 +58,7 @@ const SERVICES_DATA = [
     title: "Tyres & Tyre Repair",
     category: "mechanical",
     description: "Top-brand tyre sales, fitment, punctures repair, and health checkups for safety across all weather conditions.",
-    price: "All Brands",
+    price: "Premium Brands",
     icon: "⭕"
   },
   {
@@ -74,7 +74,7 @@ const SERVICES_DATA = [
     title: "Premium Exterior Wash",
     category: "washing",
     description: "Ph-neutral active snow foam bath, detailed alloy wheel cleaning, underbody rinse, and microfiber hand dry.",
-    price: "Deep Clean",
+    price: "Snow Foam Wash",
     icon: "🧽"
   },
   {
@@ -82,7 +82,7 @@ const SERVICES_DATA = [
     title: "Premium Interior Cleaning",
     category: "washing",
     description: "Deep carpet vacuuming, dashboard restoration, steam cleaning of upholstery, and conditioning of premium leather elements.",
-    price: "Sanitized",
+    price: "Deep Sanitized",
     icon: "🧹"
   },
   {
@@ -90,7 +90,7 @@ const SERVICES_DATA = [
     title: "Windshield Treatment",
     category: "washing",
     description: "Anti-glare hydrophobic coating for front windshields to ensure maximum water shedding and perfect visibility in heavy Indore rains.",
-    price: "Safety Shield",
+    price: "Rain Shield",
     icon: "🌧️"
   },
   {
@@ -98,7 +98,7 @@ const SERVICES_DATA = [
     title: "Insurance Assistance",
     category: "washing",
     description: "Hassle-free accidental claims support, documentation help, and tie-ups with major insurance firms for cashless workshop repairs.",
-    price: "Claims Done",
+    price: "Cashless Garage",
     icon: "📄"
   }
 ];
@@ -479,7 +479,7 @@ export default function Home() {
                 <p className="service-card-desc">{service.description}</p>
                 <div className="service-card-footer">
                   <div className="service-price">
-                    Est. Quality: <span>Excellent</span>
+                    Service Tier: <span>{service.price}</span>
                   </div>
                   <a href="#book" className="service-link">
                     Book Now <span>→</span>
