@@ -11,6 +11,7 @@ const SERVICES_DATA = [
     category: "detailing",
     description: "Ultra-durable, self-healing polyurethane film that shields your car's paint from scratches, stone chips, bird droppings, and road debris.",
     price: "Elite Shield",
+    bgImage: "/ppf_xuv700.png",
     icon: "🛡️"
   },
   {
@@ -19,6 +20,7 @@ const SERVICES_DATA = [
     category: "detailing",
     description: "High-gloss 9H nano-ceramic liquid shield that provides hydrophobic protection, chemical resistance, and long-lasting paint brilliance.",
     price: "9H Protection",
+    bgImage: "/ppf_xuv700.png",
     icon: "✨"
   },
   {
@@ -27,6 +29,7 @@ const SERVICES_DATA = [
     category: "detailing",
     description: "Multi-stage machine compounding and polishing to eliminate paint swirls, light scratches, and restore a factory showroom gloss.",
     price: "Showroom Gloss",
+    bgImage: "/hero_car.png",
     icon: "🌀"
   },
   {
@@ -35,6 +38,7 @@ const SERVICES_DATA = [
     category: "detailing",
     description: "Give your car a completely new custom aesthetic with our premium colored or textured vinyl wraps from industry-leading brands.",
     price: "Custom Styling",
+    bgImage: "/hero_car.png",
     icon: "🚗"
   },
   {
@@ -43,6 +47,7 @@ const SERVICES_DATA = [
     category: "mechanical",
     description: "Comprehensive multibrand car maintenance including engine oil change, filters, spark plugs, brakes check, and computerized diagnostics.",
     price: "OEM Standard",
+    bgImage: "/hero_servicing.png",
     icon: "🔧"
   },
   {
@@ -51,6 +56,7 @@ const SERVICES_DATA = [
     category: "mechanical",
     description: "Precision laser alignment and computerized balancing to ensure optimal handling, smooth drives, and extended tyre life.",
     price: "Laser Precision",
+    bgImage: "/hero_servicing.png",
     icon: "⚙️"
   },
   {
@@ -59,6 +65,7 @@ const SERVICES_DATA = [
     category: "mechanical",
     description: "Top-brand tyre sales, fitment, punctures repair, and health checkups for safety across all weather conditions.",
     price: "Premium Brands",
+    bgImage: "/hero_servicing.png",
     icon: "⭕"
   },
   {
@@ -67,6 +74,7 @@ const SERVICES_DATA = [
     category: "mechanical",
     description: "Flawless dent removal and oven-baked paint matching using imported paint booths to restore body panels to original condition.",
     price: "Factory Finish",
+    bgImage: "/hero_servicing.png",
     icon: "🎨"
   },
   {
@@ -75,6 +83,7 @@ const SERVICES_DATA = [
     category: "washing",
     description: "Ph-neutral active snow foam bath, detailed alloy wheel cleaning, underbody rinse, and microfiber hand dry.",
     price: "Snow Foam Wash",
+    bgImage: "/car_washing.png",
     icon: "🧽"
   },
   {
@@ -83,6 +92,7 @@ const SERVICES_DATA = [
     category: "washing",
     description: "Deep carpet vacuuming, dashboard restoration, steam cleaning of upholstery, and conditioning of premium leather elements.",
     price: "Deep Sanitized",
+    bgImage: "/car_washing.png",
     icon: "🧹"
   },
   {
@@ -91,6 +101,7 @@ const SERVICES_DATA = [
     category: "washing",
     description: "Anti-glare hydrophobic coating for front windshields to ensure maximum water shedding and perfect visibility in heavy Indore rains.",
     price: "Rain Shield",
+    bgImage: "/car_washing.png",
     icon: "🌧️"
   },
   {
@@ -99,6 +110,7 @@ const SERVICES_DATA = [
     category: "washing",
     description: "Hassle-free accidental claims support, documentation help, and tie-ups with major insurance firms for cashless workshop repairs.",
     price: "Cashless Garage",
+    bgImage: "/hero_servicing.png",
     icon: "📄"
   }
 ];
@@ -472,18 +484,27 @@ export default function Home() {
           <div className="services-grid">
             {filteredServices.map((service) => (
               <div className="service-card" key={service.id}>
-                <div className="service-icon-box">
-                  <span style={{ fontSize: "1.75rem" }}>{service.icon}</span>
-                </div>
-                <h3 className="service-card-title">{service.title}</h3>
-                <p className="service-card-desc">{service.description}</p>
-                <div className="service-card-footer">
-                  <div className="service-price">
-                    Service Tier: <span>{service.price}</span>
+                {/* Background image watermark */}
+                <div 
+                  className="service-card-bg" 
+                  style={{ backgroundImage: `url(${service.bgImage})` }}
+                />
+                
+                {/* Content wrapper to float above background watermark */}
+                <div style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", height: "100%", flexGrow: 1 }}>
+                  <div className="service-icon-box">
+                    <span style={{ fontSize: "1.75rem" }}>{service.icon}</span>
                   </div>
-                  <a href="#book" className="service-link">
-                    Book Now <span>→</span>
-                  </a>
+                  <h3 className="service-card-title">{service.title}</h3>
+                  <p className="service-card-desc">{service.description}</p>
+                  <div className="service-card-footer">
+                    <div className="service-price">
+                      Service Tier: <span>{service.price}</span>
+                    </div>
+                    <a href="#book" className="service-link">
+                      Book Now <span>→</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
