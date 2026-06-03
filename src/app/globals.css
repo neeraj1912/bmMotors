@@ -41,6 +41,8 @@ html {
   color-scheme: dark;
   background-color: var(--bg-primary);
   font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -48,6 +50,7 @@ body {
   color: var(--text-primary);
   background-color: var(--bg-primary);
   line-height: 1.6;
+  max-width: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -497,6 +500,7 @@ button, input, select, textarea {
 .ticker-wrap {
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 .ticker-track {
@@ -545,6 +549,7 @@ button, input, select, textarea {
 .ppf-spotlight {
   padding: 8rem 0;
   position: relative;
+  overflow: hidden;
 }
 
 .ppf-spotlight::before {
@@ -1279,6 +1284,17 @@ select.form-control {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  .logo-badge {
+    font-size: 0.5rem;
+    padding: 0.15rem 0.4rem;
+    margin-left: 0.25rem;
+  }
   .hero-title {
     font-size: 2.5rem;
   }
