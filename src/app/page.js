@@ -304,8 +304,8 @@ export default function Home() {
             <div className="hero-glow"></div>
             <div className="hero-image-container">
               <Image 
-                src="/hero_car.png" 
-                alt="BM Motors Premium Glossy Sports Car" 
+                src="/hero_servicing.png" 
+                alt="BM Motors Premium Car Servicing & Diagnostics" 
                 fill 
                 style={{ objectFit: "cover" }} 
                 priority
