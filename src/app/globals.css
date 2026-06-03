@@ -221,7 +221,7 @@ button, input, select, textarea {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 100;
   background: rgba(9, 10, 13, 0.75);
   backdrop-filter: blur(20px);
@@ -710,6 +710,7 @@ button, input, select, textarea {
   padding: 8rem 0;
   background-color: var(--bg-secondary);
   position: relative;
+  overflow: hidden;
 }
 
 .services-filter {
@@ -747,7 +748,7 @@ button, input, select, textarea {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -910,7 +911,7 @@ button, input, select, textarea {
 
 .why-us-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: 1fr;
   gap: 2.5rem;
 }
 
@@ -966,6 +967,7 @@ button, input, select, textarea {
   padding: 8rem 0;
   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .estimator-container {
@@ -1099,6 +1101,7 @@ select.form-control {
   border-top: 1px solid var(--border-glass);
   padding: 6rem 0 3rem;
   color: var(--text-secondary);
+  overflow: hidden;
 }
 
 .footer-grid {
@@ -1345,5 +1348,14 @@ select.form-control {
   }
   .form-card {
     padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .why-us-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
