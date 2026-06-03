@@ -355,7 +355,7 @@ export default function Home() {
               {/* BEFORE: Without PPF (Slightly faded / blurred) */}
               <div className="slider-image slider-before">
                 <Image 
-                  src="/hero_car.png" 
+                  src="/ppf_xuv700.png" 
                   alt="Without Paint Protection Film" 
                   fill 
                   style={{ objectFit: "cover", filter: "saturate(0.5) brightness(0.65) blur(0.8px)" }} 
@@ -368,7 +368,7 @@ export default function Home() {
                 style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }}
               >
                 <Image 
-                  src="/hero_car.png" 
+                  src="/ppf_xuv700.png" 
                   alt="With Paint Protection Film" 
                   fill 
                   style={{ objectFit: "cover" }} 
