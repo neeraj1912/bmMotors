@@ -549,13 +549,19 @@ export default function Home() {
                   <p>+91 96308 09008 / +91 99074 12412</p>
                 </div>
               </div>
-              <div className="info-card-item">
+              <a 
+                href="https://www.instagram.com/_bm_motors/?hl=en" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="info-card-item" 
+                style={{ cursor: "pointer", transition: "var(--transition-smooth)" }}
+              >
                 <div className="info-card-icon">📸</div>
                 <div className="info-card-text">
                   <span>Instagram Profile</span>
-                  <p>@_bm_motors</p>
+                  <p style={{ color: "var(--text-primary)" }}>@_bm_motors</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -657,7 +663,7 @@ export default function Home() {
             </p>
             <div className="footer-socials">
               <a 
-                href="https://www.instagram.com/_bm_motors/" 
+                href="https://www.instagram.com/_bm_motors/?hl=en" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="social-icon"
